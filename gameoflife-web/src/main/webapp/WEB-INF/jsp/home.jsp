@@ -64,9 +64,8 @@
     <marquee><h1 style="background-color:orange;">Welcome to Conway's Game Of Life!</h1></marquee>
 
 <div class="intro" style="background-color:DodgerBlue;">
-    <p>This is a really cool web version of Conway's famous Game Of
-        Life. The Game of Life is a cellular automaton devised by the British
-        mathematician John Horton Conway way back in 1970.</p>
+    <marquee><p>Conway's famous Game Of Life.This will help you to get to the next generation. The Game of Life is a cellular automaton devised by the British
+        mathematician John Horton Conway way back in 1970.</p></marquee>
 
     <p>The universe of the Game of Life is an infinite two-dimensional
         orthogonal grid of square cells, each of which is in one of two possible

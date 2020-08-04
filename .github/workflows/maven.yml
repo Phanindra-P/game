@@ -1,15 +1,8 @@
 name: Maven Build
 
 on:
-  schedule:
-     - cron:  '0 12 * * 3' 
-  push:
-     branches:
-     - master
-     - playground
-  pull_request:
-      branches:
-        - master
+  push: 
+    branches: master
 
 jobs:
   build:
@@ -17,9 +10,6 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-#     - uses: actions/labeler@v2
-#       with:
-#         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: |
@@ -60,12 +50,8 @@ jobs:
       uses: Azure/webapps-deploy@v2
       with:
           # Name of the Azure Web App
-          app-name: testpc
-          # Applies to Web App only: Publish profile (*.publishsettings) file contents with Web Deploy secrets
+          app-name: petclinicgh
           publish-profile: ${{ secrets.PUBLISH_PROFILE }}
-  #         # Enter an existing Slot other than the Production slot
-  #         slot-name: # optional, default is production
-          # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
           package: ${{ github.workspace }}/gameoflife-web/target/gameoflife2.war
  
 #***************** Build Docker image and push using docker commands
